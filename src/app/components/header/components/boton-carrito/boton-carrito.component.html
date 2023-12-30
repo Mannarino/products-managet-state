@@ -1,0 +1,10 @@
+<div class="cart ">
+  <img src="/assets/carrito-de-compras.png"   alt="">  
+</div>
+<button type="button" routerLink="order-card" class="btn btn-primary position-relative">
+   ver pedido
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+      {{cantidadProductos}}
+      <span class="visually-hidden">unread messages</span>
+    </span>
+  </button>

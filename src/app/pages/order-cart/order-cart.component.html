@@ -1,0 +1,11 @@
+
+
+
+  
+  <div class="contenido1">
+    <div class="productos-seleccionados" *ngFor="let producto of Productos">
+        <app-selected-item [producto]="producto"></app-selected-item>
+    </div>
+  </div>
+  
+  <app-resumen class="contenido2"></app-resumen>

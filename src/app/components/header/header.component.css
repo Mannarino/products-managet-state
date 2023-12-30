@@ -1,0 +1,30 @@
+:host{
+    display: block;
+    margin-bottom: 100px;
+}
+.container-main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90% !important;
+    
+    margin: auto;
+    @media (max-width: 500px) {
+        flex-direction: column; /* Cambio a dirección de columna */
+        align-items: center; /* Centra los elementos en el eje cruzado */
+      }
+}
+
+@media (max-width: 768px) {
+    .container-main{
+      width: 100% !important;
+     
+  }
+}
+@media (max-width: 500px) {
+    .container-main app-menu,
+    .container-main app-buscador,
+    .container-main app-boton-carrito {
+      margin-bottom: 10px;
+    }
+  }

@@ -1,0 +1,14 @@
+
+<div class="modal-body">
+
+    <h5 class="card-title text-center">{{detallesObject.nombre}}</h5>
+    <img [src]="'assets/' +detallesObject.imagen" class="card-img-top" alt="...">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <ul >
+      <li class="list-group-item"><b>precio:</b> {{detallesObject.precio | currency:'USD':'symbol':'1.2-2'}}</li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" (click)="add(detallesObject)">agregar</button>
+  </div>

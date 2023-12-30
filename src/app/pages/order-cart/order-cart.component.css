@@ -1,0 +1,40 @@
+
+:host{
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto; /* Dos filas automáticas */
+    grid-template-columns: 70% 30%; /* Una columna que ocupa todo el ancho */
+    gap: 10px; /* Espacio entre los elementos */
+  }
+  
+
+  .contenido1 {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea cuatro columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los elementos */
+    gap: 10px; /* Espacio entre las tarjetas */
+    grid-row: 2 / 3; /* Segunda fila */
+    grid-column: 1 / 2; /* Ocupa toda la primera columna */
+    grid-auto-rows: 1fr; /* Todas las filas tendrán la misma altura */
+    justify-items: stretch;
+    align-items: stretch;
+  }
+  
+  /* Estilos para cada tarjeta */
+  .productos-seleccionados {
+    display: grid;
+    justify-items: stretch;
+    align-items: stretch;
+    background-color: lightcoral; /* Color de fondo opcional */
+    padding: 10px;
+    text-align: center;
+    
+  }
+ 
+  .contenido2 {
+    grid-row: 2 / 3; /* Segunda fila */
+    grid-column: 2/ 3; /* Ocupa toda la primera columna */
+    
+  }
+  

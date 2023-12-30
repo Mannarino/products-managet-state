@@ -1,0 +1,7 @@
+:host{
+    display: flex;
+    padding: 5px;
+}
+.cart{
+    margin: 10px;
+}

@@ -1,0 +1,28 @@
+img{
+    height: 240px;
+}
+.card-title {
+    height: 60px; /* Establece la altura máxima (equivalente a unas 2 líneas de texto aproximadamente) */
+    overflow: hidden; /* Oculta el texto que excede la altura definida */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más texto oculto */
+  }
+button{
+    margin-right: 10px;
+}
+ul {
+    margin-left: 0 !important;
+    padding: 0 !important; 
+    margin-bottom: 10px;/* También puedes eliminar el padding si es necesario */
+  }
+  
+@media (max-width: 768px) {
+    .card {
+        max-width: 100% !important;
+     
+    }
+  }
+@media (max-width: 629px) {
+  button{
+    margin-bottom: 10px;
+  }
+}

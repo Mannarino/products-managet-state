@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.container-main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90% !important;
+  
+  margin: auto;
+  
+}
+
+@media (max-width: 768px) {
+  .container-main{
+    width: 100% !important;
+   
+}
+}

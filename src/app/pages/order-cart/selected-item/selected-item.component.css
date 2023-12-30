@@ -1,0 +1,24 @@
+
+.card-title {
+    height: 60px; /* Establece la altura máxima (equivalente a unas 2 líneas de texto aproximadamente) */
+    overflow: hidden; /* Oculta el texto que excede la altura definida */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más texto oculto */
+  }
+img{
+    display: block; /* Asegura que la imagen sea un bloque */
+    width: 150px; /* Ajustar tamaño máximo de la imagen */
+    
+  }
+.card-img-top{
+    width: 197px;
+    height: 197px;
+    margin: auto;
+}
+.card{
+  height: auto;
+  justify-items: stretch;
+  align-items: stretch;
+}
+button{
+  margin-bottom: 5px;
+}
