@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SwPush, SwUpdate } from '@angular/service-worker';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -12,17 +13,21 @@ export class AppComponent {
   constructor(readonly swPush: SwPush, private swUpdate:SwUpdate) {}
 
   ngOnInit(){
+    console.log("este es un valor de entorno:"+environment.prueba)
+    console.log("este es un valor de entorno:"+environment.prueba2)
+    console.log("este es un valor de entorno:"+import.meta.env.NG_APP_PRUEBA)
+    
     this.subscribeToPush()
     this.chequearActualizaciones()
-    setTimeout(() => {
+    setTimeout(() => { }, 5000); 
       
-    }, 5000); 
+   
   }
 
   private async subscribeToPush() {
     try {
       const sub = await this.swPush.requestSubscription({
-        serverPublicKey:"BBvxcJ95z5H43KlQ4KKUPvodaeq71kyHftpqLPoJ1hW2eleZURivWVLGdn9cJnDvGgXfXFGcZ8Pvo-Bix4Tktvc",
+        serverPublicKey:environment.serverPublicKey,
       });
       // TODO: Send to server.
     } catch (err) {
