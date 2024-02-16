@@ -2,7 +2,7 @@ import { Component} from '@angular/core';
 import { ComunicationDetailsService } from '../comunication-details.service';
 import { Subscription } from 'rxjs';
 import { AlertifyMessagesService } from 'src/app/core/services/alertify-messages.service';
-import { StateManagetCardService } from 'src/app/core/state-managet-card.service';
+import { StateManagetCardService } from 'src/app/core/services/state-managet-card.service';
 import { Item } from 'src/app/core/models/item';
 @Component({
   selector: 'app-detalles',

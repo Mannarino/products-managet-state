@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SwPush, SwUpdate } from '@angular/service-worker';
 import { environment } from 'src/environments/environment';
+import { NotificationService } from './core/services/notification.service';
 
 
 @Component({
@@ -10,7 +11,9 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
   title = 'client';
-  constructor(readonly swPush: SwPush, private swUpdate:SwUpdate) {}
+  constructor(readonly swPush: SwPush, 
+              private swUpdate:SwUpdate,
+              private notificationService:NotificationService) {}
 
   ngOnInit(){
     console.log("este es un valor de entorno:"+environment.prueba)
@@ -30,6 +33,8 @@ export class AppComponent {
         serverPublicKey:environment.serverPublicKey,
       });
       // TODO: Send to server.
+      this.notificationService.postData(environment.api,sub)
+      .subscribe(()=>{})
     } catch (err) {
       console.error('Could not subscribe due to:', err);
     }

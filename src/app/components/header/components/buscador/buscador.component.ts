@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
-import { BuscadorService } from 'src/app/core/buscador.service';
+import { BuscadorService } from 'src/app/core/services/buscador.service';
 @Component({
   selector: 'app-buscador',
   templateUrl: './buscador.component.html',

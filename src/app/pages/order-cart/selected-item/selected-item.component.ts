@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Item } from 'src/app/core/models/item';
 import { AlertifyMessagesService } from 'src/app/core/services/alertify-messages.service';
-import { StateManagetCardService } from 'src/app/core/state-managet-card.service';
+import { StateManagetCardService } from 'src/app/core/services/state-managet-card.service';
 
 @Component({
   selector: 'app-selected-item',

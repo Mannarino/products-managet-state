@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BuscadorService } from 'src/app/core/buscador.service';
+import { BuscadorService } from 'src/app/core/services/buscador.service';
 import { data } from 'src/app/data/data';
 @Component({
   selector: 'app-books',
