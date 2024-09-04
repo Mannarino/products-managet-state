@@ -21,12 +21,15 @@ export class DetallesComponent {
   constructor(private comunicationDetailsService:ComunicationDetailsService,
               private stateManageCardService:StateManagetCardService,
               private alertifyMessagesService:AlertifyMessagesService) { }
+
+  //al iniciar el componente recibo los detalles del producto en cuestion
   ngOnInit(): void {
    this.suscripcion =  this.comunicationDetailsService.obtenerObjetoObservable().subscribe(objeto => {
       this.detallesObject = objeto;
-      // Aquí puedes hacer lo que necesites con el objeto actualizado
     });
   }
+
+  // desde este componente detalles tambien puedo agregar el producto al carrito
   add(item:Item){
     this.stateManageCardService.addToCard(item)
     this.alertifyMessagesService.addItemMessage()
