@@ -11,7 +11,7 @@ export class ThingsComponent {
   things : any[] = [];
   constructor(private itemsStateService:ItemsStateService){}
   ngOnInit(){
-    this.itemsStateService.setArrayObjetos(data.libros)
+    this.itemsStateService.setArrayObjetos(data.things)
     
     this.itemsStateService.nuevaLista$
     .subscribe(value => this.things=value)

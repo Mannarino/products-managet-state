@@ -7,7 +7,13 @@
         <li class="list-group-item"><b>precio:</b> {{dataPadre.precio | currency:'USD':'symbol':'1.2-2'}}</li>
       </ul>
       <div class="mt-auto">
-        <button href="#" (click)="add(dataPadre)" class="btn btn-primary">agregar a carrito</button>
+        <button  (click)="add(dataPadre)" class="btn btn-primary position-relative">
+          <span *ngIf="dataPadre.cantidad > 0" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{dataPadre.cantidad}}
+            <span class="visually-hidden">unread messages</span>
+          </span>
+          agregar a carrito
+        </button>
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" (click)="detalles(dataPadre)"  #myInput  data-bs-toggle="modal" data-bs-target="#exampleModal">
          ver detalles
