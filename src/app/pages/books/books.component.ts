@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { BuscadorService } from 'src/app/core/services/buscador.service';
+import { ItemsStateService } from 'src/app/core/services/items-state.service';
+
+
 import { data } from 'src/app/data/data';
 @Component({
   selector: 'app-books',
@@ -8,11 +10,13 @@ import { data } from 'src/app/data/data';
 })
 export class BooksComponent {
   books : any[] = [];
-  constructor(private buscadorService:BuscadorService){}
+  constructor(private itemsStateService:ItemsStateService){}
   ngOnInit(){
-    this.buscadorService.setArrayObjetos(data.libros)
-    console.log(this.books=data.libros)
-    this.buscadorService.nuevaLista$
-    .subscribe(value => this.books=value)
+    console.log('ngOnInit se está ejecutando');
+    this.itemsStateService.setArrayObjetos(data.libros)
+    
+    this.itemsStateService.nuevaLista$
+    .subscribe(value => {this.books=value
+      console.log(this.books);} )
   }
 }
