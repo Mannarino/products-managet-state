@@ -47,5 +47,17 @@ Las páginas principales del sitio están organizadas en el directorio `app/page
 
 Cada página está estructurada para ofrecer una experiencia coherente y fácil de usar, aprovechando los componentes reutilizables de la aplicación, como el `header` y el `item-card`.
 
+# Estructura del Core
+
+El directorio `app/core` contiene elementos centrales para la lógica de la aplicación. Está organizado de la siguiente manera:
+
+- **`models`**: Carpeta donde se encuentran las interfaces. Actualmente, solo contiene una interfaz que define la estructura de un ítem.
+  
+- **`services`**: Carpeta que agrupa tres servicios globales importantes:
+  - **Servicio de alertas globales**: Envía mensajes de alerta cuando un producto es agregado o eliminado del carrito.
+  - **Servicio de estado del carrito**: Gestiona el estado general del carrito de compras.
+  - **Servicio de estado de ítems**: Gestiona el estado de los ítems en todas las páginas y en el buscador, permitiendo que la información esté sincronizada en toda la aplicación.
+
+
 
 
