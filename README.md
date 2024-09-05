@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
+# Descripción del Proyecto
+
+Este proyecto es una aplicación Angular que gestiona un catálogo de productos, donde los usuarios pueden agregar ítems a un carrito de compras, ver detalles de productos y navegar entre distintas páginas de la aplicación.
+
+# Punto de Entrada de la Aplicación
+
+El archivo `app.component` es el punto de entrada de la aplicación. En su vista, se incluye el siguiente código:
+
+- **`<app-header>`**: Es el componente reutilizable que contiene el menú de navegación y otros elementos importantes como el botón del carrito de compras y el buscador de productos.
+- **`<router-outlet>`**: Es el contenedor donde se cargarán las diferentes páginas de la aplicación, dependiendo del ruteo configurado.
+
+Las rutas de la aplicación están definidas en el archivo de enrutamiento (`app.module.routing`), y los enlaces a las diferentes páginas están disponibles a través del componente `header`.
+
 
 # Manejo de Inmutabilidad
 En este proyecto, los ítems de productos están representados como objetos dentro de arrays que se utilizan a lo largo de diferentes páginas de la aplicación. Cuando un usuario selecciona un producto para agregarlo al carrito, el mismo objeto se transfiere por referencia al array del carrito.
