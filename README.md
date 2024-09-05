@@ -36,4 +36,16 @@ El `header` es un componente reutilizable ubicado en la carpeta `app/components`
 
 El `header` proporciona una estructura coherente en la navegación y facilita la interacción del usuario con funcionalidades clave como la búsqueda de productos y la revisión de su pedido.
 
+# Páginas del Sitio
+
+Las páginas principales del sitio están organizadas en el directorio `app/pages`, y son las siguientes:
+
+- **`things`**: Página dedicada a mostrar productos o ítems de una categoría específica.
+- **`books`**: Página que muestra una lista de libros disponibles.
+- **`order-cart`**: Página donde el usuario puede revisar los productos agregados al carrito y ver un resumen de su orden.
+- **`welcome`**: Página de bienvenida que introduce al usuario a la aplicación.
+
+Cada página está estructurada para ofrecer una experiencia coherente y fácil de usar, aprovechando los componentes reutilizables de la aplicación, como el `header` y el `item-card`.
+
+
 
