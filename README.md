@@ -22,9 +22,10 @@ En la carpeta `app/components` se alojan los componentes reutilizables que se ut
 Este componente es una tarjeta de producto que se utiliza en múltiples páginas de productos. Cada `item-card` muestra información básica del producto y tiene las siguientes funcionalidades:
 
 - **Agregar al carrito**: Un botón que permite al usuario agregar el producto al carrito.
-- **Ver detalles**: Un botón que, al presionarlo, muestra un componente hijo dentro del `item-card`, revelando más detalles sobre el producto.
+- **Ver detalles**: Un botón que, al presionarlo, despliega un modal donde se muestra un componente hijo con los detalles del producto. La información sobre el ítem en cuestión se pasa al componente hijo utilizando el servicio `comunication-detalis`, que emplea observables para comunicar entre el `item-card` y el componente hijo.
 
-El uso de este componente centralizado permite mantener una interfaz de usuario coherente y simplificar el mantenimiento, ya que cualquier cambio en la tarjeta de producto se verá reflejado en todas las páginas donde se usa.
+El uso de este componente centralizado permite mantener una interfaz de usuario coherente y simplificar el mantenimiento, ya que cualquier cambio en la tarjeta de producto se reflejará en todas las páginas donde se usa.
+
 
 #### Componente `header`
 
