@@ -8,7 +8,7 @@
         <li class="list-group-item"><b>precio:</b> {{dataPadre.precio | currency:'USD':'symbol':'1.2-2'}}</li>
       </ul>
       <div class="mt-auto">
-        <button  (click)="add(dataPadre)" class="btn btn-primary position-relative">
+        <button  (click)="add(dataPadre)" class="btn btn-primary me-2 position-relative">
           <span *ngIf="dataPadre.cantidad > 0" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             {{dataPadre.cantidad}}
             <span class="visually-hidden">unread messages</span>

@@ -3,32 +3,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Crea cuatro columnas de igual tamaño */
     gap: 20px; /* Espacio entre los elementos */
+    padding-bottom: 30px;
 }
-@media (max-width: 992px) {
-  :host {
-     
-    margin-top: 80px;
-  }
-}
+
+
 @media (max-width: 768px) {
     :host {
         max-width: 100%;
       grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas más pequeñas */
-      margin-top: 100px;
+      
+      
     }
   }
 
-  @media (max-width: 662px) {
-    :host {
-        gap: 5px;
-    }
-  }
-  @media (max-width: 500px) {
-    :host {
-       
-      margin-top: 200px;
-    }
-  }
+  
+  
   @media (max-width: 395px) {
     :host {
       grid-template-columns: repeat(1, 1fr); 

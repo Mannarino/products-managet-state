@@ -1,14 +1,21 @@
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-    <div class="container-fluid">
+
+<nav class="navbar navbar-expand-sm bg-body-tertiary fixed-top">
+  <div class="container-fluid">
     
+    <!-- Botón de hamburguesa -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Contenedor colapsable del menú -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="container-main">
         <app-menu></app-menu>
         <app-buscador></app-buscador>
         <app-boton-carrito></app-boton-carrito>
-      </div> 
-        
-        
-      
+      </div>
     </div>
-  </nav>
+    
+  </div>
+</nav>

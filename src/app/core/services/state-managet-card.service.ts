@@ -45,18 +45,26 @@ sacarUno(item:Item){
     }
   } 
 }
- calcularOrden(item:Item){
-  if(this.cantidadPrecioTotal ===0){
-    this.carrito.forEach(item =>{
-    this.calcularCantidadItems(item) 
-    this.calcularCantidadPrecio(item)
-   })
-  } else{
-    this.cantidadPrecioTotal = this. cantidadPrecioTotal + item.precio
-    this.cantidadItems ++ 
-    this.emitirActualizacionDeEstado()
+ 
+ calcularOrden(item: Item) {
+  if (this.cantidadPrecioTotal === 0 && this.carrito.length === 1) {
+    // Si es el primer producto y no hay monto total, inicializa el precio
+    this.cantidadPrecioTotal = item.cantidad * item.precio;
+    this.cantidadItems = item.cantidad;
+  } else if (this.cantidadPrecioTotal === 0) {
+    // Si no hay monto total y hay más de un producto en el carrito
+    this.carrito.forEach(item => {
+      this.calcularCantidadItems(item);
+      this.calcularCantidadPrecio(item);
+    });
+  } else {
+    // Si ya hay un monto total, simplemente sumamos el nuevo producto
+    this.cantidadPrecioTotal += item.precio;
+    this.cantidadItems++;
   }
- }
+  this.emitirActualizacionDeEstado();
+}
+
  calcularCantidadPrecio(item:Item){
     const nuevaCantidad=item.cantidad * item.precio
     this.cantidadPrecioTotal = this. cantidadPrecioTotal + nuevaCantidad

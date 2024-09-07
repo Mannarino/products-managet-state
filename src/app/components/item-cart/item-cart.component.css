@@ -6,9 +6,9 @@ img{
     overflow: hidden; /* Oculta el texto que excede la altura definida */
     text-overflow: ellipsis; /* Agrega puntos suspensivos (...) para indicar que hay más texto oculto */
   }
-button{
-    margin-right: 10px;
-}
+  button{
+    margin-bottom: 10px;
+  }
 ul {
     margin-left: 0 !important;
     padding: 0 !important; 
@@ -18,7 +18,10 @@ ul {
 @media (max-width: 768px) {
     .card {
         max-width: 100% !important;
-     
+        
+    }
+    button{
+      margin-bottom: 10px;
     }
   }
 @media (max-width: 629px) {
