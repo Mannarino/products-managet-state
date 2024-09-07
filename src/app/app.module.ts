@@ -18,6 +18,7 @@ import { BuscadorComponent } from './components/header/components/buscador/busca
 import { ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     DetallesComponent,
     SelectedItemComponent,
     ResumenComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
